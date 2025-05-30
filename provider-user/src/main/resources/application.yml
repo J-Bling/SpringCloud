@@ -1,0 +1,30 @@
+server:
+  port: 7001
+
+mybatis:
+  type-aliases-package: com.pojo
+  config-locations: classpath:mybatis/mybatis-config.xml
+  mapper-locations: classpath:mybatis/mapper/*.xml
+
+spring:
+  application:
+    name: SPRING-CLOUD-PROVIDER-USER
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource # 数据源
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    url: jdbc:mysql://localhost:3306/cloud_test?useUnicode=true&characterEncoding=utf-8
+    password: 12345678
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7003/eureka/,http://cloud-eureka:7004/eureka/
+    register-with-eureka: true
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.application.name}:${server.port}
+
+info:
+  app.name: cloud-service
+  company.name: bilibili

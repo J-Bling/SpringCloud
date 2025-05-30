@@ -1,0 +1,13 @@
+server:
+  port: 7005
+
+spring:
+  application:
+    name: user-consumer
+
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: false
+    service-url:
+      defaultZone: http://localhost:7003/eureka/,http://cloud-eureka:7004/eureka/
