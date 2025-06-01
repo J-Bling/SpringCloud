@@ -11,8 +11,6 @@
         <module>eureka</module>
         <module>eureka_7004</module>
         <module>Service</module>
-        <module>Service/Productor</module>
-        <module>Service/Consumer</module>
     </modules>
 
     <groupId>org.example</groupId>
