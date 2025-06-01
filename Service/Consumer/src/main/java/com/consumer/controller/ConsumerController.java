@@ -29,8 +29,8 @@ public class ConsumerController {
 
     @Value("${user.name}")
     public String name;
-//    @Value("${user.age}")
-//    public String age;
+    @Value("${user.age}")
+    public String age;
 
 
     private final Logger logger = LoggerFactory.getLogger(ConsumerController.class);
@@ -61,22 +61,29 @@ public class ConsumerController {
 
     @GetMapping("/randoms")
     public Productor randoms(@RequestParam("name") String name){
-        ServiceInstance instance = serviceInstanceChooser.choose("productor");
-        if(instance==null) return null;
 
-        String host=instance.getHost();
-        int port = instance.getPort();
+        // 使用了 @LoadBalanced 注解只能使用服务名来访问
+        try {
+            ServiceInstance instance = serviceInstanceChooser.choose("productor");
+            if (instance == null) return null;
 
-        System.out.println("host is "+host);
-        System.out.println("port is "+port);
+            String host = instance.getHost();
+            int port = instance.getPort();
 
-        String base_url = "http://"+host+":"+port;
+            System.out.println("host is " + host);
+            System.out.println("port is " + port);
 
-        String url = base_url + "/test/random/"+name;
+            String base_url = "http://" + host + ":" + port;
 
-        Productor productor = restTemplate.getForObject(url,Productor.class);
-        logger.info("urls : {}",url);
-        return productor;
+            String url = base_url + "/test/random/" + name;
+
+            logger.info("urls : {}", url);
+            Productor productor = restTemplate.getForObject(url, Productor.class);
+            return productor;
+        }catch (Exception  e){
+            logger.error("{}",e.getMessage());
+            return null;
+        }
     }
 
     @GetMapping("/randomes")
@@ -86,6 +93,6 @@ public class ConsumerController {
 
     @GetMapping("/config")
     public String getConfig(){
-        return "name : "+name;
+        return "name : "+name + " age : "+age;
     }
 }
