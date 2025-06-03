@@ -1,0 +1,10 @@
+server:
+  port: 9001
+
+
+spring:
+  application:
+    name: server
+  cloud:
+    nacos:
+      server-addr: localhost:8848

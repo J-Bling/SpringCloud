@@ -3,13 +3,13 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.mapper.BookMapper">
     <insert id="add" parameterType="com.bean.Book">
-        insert into book (book_name,status,created) values (bookName,status,created)
+        insert into book (book_name,status,created) values (#{bookName},#{status},#{created})
     </insert>
     <delete id="delete" parameterType="java.lang.Integer">
         delete from book where id = #{id}
     </delete>
-    <select id="find" resultType="com.bean.Book" parameterType="java.lang.Integer">
-        select * from book where id=#{id}
+    <select id="find" parameterType="java.lang.Integer" resultType="com.bean.Book">
+        select * from book where id =#{id}
     </select>
     <select id="finds" resultType="com.bean.Book">
         select * from book
