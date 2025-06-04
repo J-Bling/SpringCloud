@@ -5,12 +5,16 @@ spring:
     nacos:
       server-addr: 127.0.0.1:8848
       discovery:
-        register-enabled: false
+        register-enabled: true
       config:
         server-addr: 127.0.0.1:8848
         file-extension: yml  # 或 yml
         group: DEFAULT_GROUP、
         prefix: ${spring.application.name}
+    sentinel:
+      transport:
+        dashboard: localhost:8090
+      eager: true
 server:
   port: 7001
 logging:

@@ -13,6 +13,7 @@
         <module>Productor1</module>
         <module>Server01</module>
         <module>Model</module>
+        <module>getway</module>
     </modules>
     <parent>
         <groupId>org.example</groupId>

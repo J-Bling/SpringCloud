@@ -8,3 +8,7 @@ spring:
   cloud:
     nacos:
       server-addr: localhost:8848
+    sentinel:
+      transport:
+        dashboard: localhost:8090
+      eager: true

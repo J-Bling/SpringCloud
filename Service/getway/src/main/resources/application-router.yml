@@ -1,0 +1,12 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+      - id: book
+        uri: lb://consumer1
+        predicates:
+        -  Path=/api/book/**
+      - id: baidu
+        uri: http://baidu.com
+        predicates:
+        -  Path=/**

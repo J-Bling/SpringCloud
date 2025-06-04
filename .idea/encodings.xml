@@ -3,6 +3,18 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/Api/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Api/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SerVice2/Common/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SerVice2/Common/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SerVice2/Inventory/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SerVice2/Inventory/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SerVice2/Order/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SerVice2/Order/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SerVice2/Payment/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SerVice2/Payment/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SerVice2/User/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SerVice2/User/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SerVice2/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SerVice2/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Service/Consumer/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Service/Consumer/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Service/Consumer1/src/main/java" charset="UTF-8" />
@@ -17,6 +29,8 @@
     <file url="file://$PROJECT_DIR$/Service/Productor1/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Service/Server01/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Service/Server01/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Service/getway/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Service/getway/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Service/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Service/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/comsumer-user/src/main/java" charset="UTF-8" />

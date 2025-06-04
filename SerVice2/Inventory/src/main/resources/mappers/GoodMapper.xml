@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.inventory.mapper.GoodMapper">
+    <insert id="insert" parameterType="com.pojo.Good">
+        insert into good (name,type,value,master) values (#{name},#{type},#{value},#{master})
+    </insert>
+
+    <delete id="delete" parameterType="java.lang.Long">
+        delete from good where id=#{id}
+    </delete>
+
+    <update id="updateRemainder">
+        update good set remainder = remainder + #{remainder} where id=#{id}
+    </update>
+
+    <select id="find" parameterType="java.lang.Long" resultType="com.pojo.Good">
+        select * from good where id =#{id}
+    </select>
+</mapper>
